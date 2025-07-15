@@ -5,7 +5,7 @@ function AddUserForm({ fetchUsers }) {
 
   const handleAdd = async () => {
     if (!name.trim()) return;
-    await fetch('http://localhost:5000/api/users', {
+    await fetch(' https://points-system-3tj2.onrender.com', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name }),

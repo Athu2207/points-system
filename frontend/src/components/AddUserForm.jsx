@@ -8,7 +8,7 @@ function AddUserForm({ fetchUsers }) {
     await fetch('https://points-system-3tj2.onrender.com/api/users', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name }), // 👈 This will be: { "name": "xyz" }
+      body: JSON.stringify({ name }),
     });
 
     setName('');

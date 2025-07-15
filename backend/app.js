@@ -7,6 +7,11 @@ const userRoutes = require('./routes/userRoutes');
 const claimRoutes = require('./routes/claimRoutes');
 
 const app = express();
+app.options('*', cors({
+  origin: 'https://pointssystem1234.netlify.app',
+  methods: ['GET', 'POST'],
+  credentials: true
+}));
 app.use(cors({
   origin: 'https://pointssystem1234.netlify.app',
   methods: ['GET', 'POST'],

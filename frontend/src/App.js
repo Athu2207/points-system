@@ -10,13 +10,13 @@ function App() {
   const [leaderboard, setLeaderboard] = useState([]);
 
   const fetchUsers = async () => {
-    const res = await fetch('http://localhost:5000/api/users');
+    const res = await fetch('https://points-system-3tj2.onrender.com/api/users');
     const data = await res.json();
     setUsers(data);
   };
 
   const fetchLeaderboard = async () => {
-    const res = await fetch('http://localhost:5000/api/claim/leaderboard');
+    const res = await fetch('https://points-system-3tj2.onrender.com/api/claim/leaderboard');
     const data = await res.json();
     setLeaderboard(data);
   };

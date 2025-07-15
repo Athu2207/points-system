@@ -7,7 +7,14 @@ const userRoutes = require('./routes/userRoutes');
 const claimRoutes = require('./routes/claimRoutes');
 
 const app = express();
-app.use(cors());
+const corsOptions = {
+  origin: '*', // Or restrict to Netlify domain for security
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type'],
+};
+
+app.use(cors(corsOptions));
+
 app.use(express.json());
 
 app.use('/api/users', userRoutes);

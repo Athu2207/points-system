@@ -7,20 +7,16 @@ const userRoutes = require('./routes/userRoutes');
 const claimRoutes = require('./routes/claimRoutes');
 
 const app = express();
-const corsOptions = {
-  origin: '*', // Or restrict to Netlify domain for security
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  allowedHeaders: ['Content-Type'],
-};
-
-app.use(cors(corsOptions));
+app.use(cors({
+  origin: 'https://pointssystem1234.netlify.app',
+  methods: ['GET', 'POST'],
+  credentials: true
+}));
 
 app.use(express.json());
 
 app.use('/api/users', userRoutes);
 app.use('/api/claim', claimRoutes);
-
-// ✅ Connect to MongoDB and start server
 const PORT = process.env.PORT || 10000;
 const MONGO_URI = process.env.MONGO_URI;
 

@@ -13,7 +13,7 @@ app.options('*', cors({
   credentials: true
 }));
 app.use(cors({
-  origin: 'https://pointssystem1234.netlify.app',
+  origin: 'https://pointssystem123.netlify.app',
   methods: ['GET', 'POST'],
   credentials: true
 }));

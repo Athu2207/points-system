@@ -1,3 +1,5 @@
+import './styles/Leaderboard.css';
+
 export default function Leaderboard({ data }) {
   if (!data || data.length === 0) return <p>No leaderboard data yet.</p>;
 

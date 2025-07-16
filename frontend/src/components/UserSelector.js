@@ -1,3 +1,5 @@
+import './styles/UserSelector.css';
+
 export default function UserSelector({ users, selectedUser, setSelectedUser }) {
   return (
     <div style={{ marginBottom: 10 }}>

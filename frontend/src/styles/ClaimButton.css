@@ -1,0 +1,14 @@
+.claim-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.claim-button:hover {
+  background-color: #0056b3;
+}

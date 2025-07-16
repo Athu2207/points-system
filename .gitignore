@@ -8,3 +8,6 @@
 
 # Editor configs
 .vscode/
+# Ignore sensitive and bulky files
+/backend/node_modules/
+/backend/.env

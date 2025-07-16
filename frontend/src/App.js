@@ -10,15 +10,25 @@ function App() {
   const [leaderboard, setLeaderboard] = useState([]);
 
   const fetchUsers = async () => {
-    const res = await fetch('https://points-system-3tj2.onrender.com/api/users');
-    const data = await res.json();
-    setUsers(data);
+    try {
+      const res = await fetch('http://localhost:10000/api/users');
+      const data = await res.json();
+      setUsers(data);
+    } catch (err) {
+      console.error('❌ fetchUsers failed:', err);
+      alert('Failed to fetch users.');
+    }
   };
 
   const fetchLeaderboard = async () => {
-    const res = await fetch('https://points-system-3tj2.onrender.com/api/claim/leaderboard');
-    const data = await res.json();
-    setLeaderboard(data);
+    try {
+      const res = await fetch('http://localhost:10000/api/claim/leaderboard');
+      const data = await res.json();
+      setLeaderboard(data);
+    } catch (err) {
+      console.error('❌ fetchLeaderboard failed:', err);
+      alert('Failed to fetch leaderboard.');
+    }
   };
 
   useEffect(() => {
@@ -27,8 +37,8 @@ function App() {
   }, []);
 
   return (
-    <div style={{ padding: 20 }}>
-      <h2>Point Claim System</h2>
+    <div style={{ padding: 20, fontFamily: 'Arial' }}>
+      <h2>🏆 Point Claim Leaderboard</h2>
       <UserSelector users={users} selectedUser={selectedUser} setSelectedUser={setSelectedUser} />
       <ClaimButton selectedUser={selectedUser} fetchLeaderboard={fetchLeaderboard} />
       <AddUserForm fetchUsers={fetchUsers} />

@@ -2,17 +2,18 @@ const express = require('express');
 const router = express.Router();
 const User = require('../models/User');
 
+// Get all users
 router.get('/', async (req, res) => {
-  console.log("🔥 GET /api/users hit");
   const users = await User.find();
   res.json(users);
 });
 
+// Add new user
 router.post('/', async (req, res) => {
-  console.log("🔥 POST /api/users hit", req.body);
-  const newUser = new User(req.body);
+  const { name } = req.body;
+  const newUser = new User({ name });
   await newUser.save();
-  res.status(201).json(newUser);
+  res.json(newUser);
 });
 
 module.exports = router;

@@ -11,7 +11,7 @@ function App() {
 
   const fetchUsers = async () => {
     try {
-      const res = await fetch('http://localhost:10000/api/users');
+      const res = await fetch('https://points-system-backend-e5n8.onrender.com/api/users');
       const data = await res.json();
       setUsers(data);
     } catch (err) {
@@ -22,7 +22,7 @@ function App() {
 
   const fetchLeaderboard = async () => {
     try {
-      const res = await fetch('http://localhost:10000/api/claim/leaderboard');
+      const res = await fetch('https://points-system-backend-e5n8.onrender.com/api/claim/leaderboard');
       const data = await res.json();
       setLeaderboard(data);
     } catch (err) {

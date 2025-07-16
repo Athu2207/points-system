@@ -6,7 +6,7 @@ export default function AddUserForm({ fetchUsers }) {
   const handleAdd = async () => {
     if (!name.trim()) return;
 
-    await fetch('http://localhost:10000/api/users', {
+    await fetch('https://points-system-backend-e5n8.onrender.com/api/users', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name }),

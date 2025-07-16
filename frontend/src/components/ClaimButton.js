@@ -2,7 +2,7 @@ export default function ClaimButton({ selectedUser, fetchLeaderboard }) {
   const handleClaim = async () => {
     if (!selectedUser) return alert("Please select a user first.");
 
-    const res = await fetch(`http://localhost:10000/api/claim/${selectedUser}`, {
+    const res = await fetch(`https://points-system-backend-e5n8.onrender.com/api/claim/${selectedUser}`, {
       method: 'POST',
     });
 

@@ -1,23 +1,26 @@
 .add-user-form {
   display: flex;
   gap: 0.5rem;
-  margin-bottom: 1.5rem;
+  margin-top: 1rem;
 }
 
 .add-user-form input {
   flex: 1;
-  padding: 0.5rem;
+  padding: 0.5rem 0.75rem;
   border: 1px solid #ccc;
   border-radius: 6px;
+  font-size: 1rem;
 }
 
 .add-user-form button {
+  padding: 0.5rem 1rem;
   background-color: #28a745;
   color: white;
   border: none;
-  padding: 0.5rem 1rem;
   border-radius: 6px;
+  font-size: 1rem;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .add-user-form button:hover {

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import '../styles/AddUserForm.css';
+
 export default function AddUserForm({ fetchUsers }) {
   const [name, setName] = useState('');
 
@@ -17,7 +18,7 @@ export default function AddUserForm({ fetchUsers }) {
   };
 
   return (
-    <div style={{ marginTop: 10 }}>
+    <div className="add-user-form">
       <input
         value={name}
         onChange={e => setName(e.target.value)}

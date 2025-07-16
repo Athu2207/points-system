@@ -1,4 +1,5 @@
 import '../styles/ClaimButton.css';
+
 export default function ClaimButton({ selectedUser, fetchLeaderboard }) {
   const handleClaim = async () => {
     if (!selectedUser) return alert("Please select a user first.");
@@ -13,5 +14,9 @@ export default function ClaimButton({ selectedUser, fetchLeaderboard }) {
     fetchLeaderboard();
   };
 
-  return <button onClick={handleClaim}>🎯 Claim Points</button>;
+  return (
+    <button className="claim-button" onClick={handleClaim}>
+      🎯 Claim Points
+    </button>
+  );
 }

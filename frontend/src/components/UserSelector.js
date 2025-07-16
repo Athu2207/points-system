@@ -1,4 +1,4 @@
-import './styles/UserSelector.css';
+import '../styles/UserSelector.css';
 
 export default function UserSelector({ users, selectedUser, setSelectedUser }) {
   return (

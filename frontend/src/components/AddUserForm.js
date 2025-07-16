@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './styles/AddUserForm.css';
+import '../styles/AddUserForm.css';
 export default function AddUserForm({ fetchUsers }) {
   const [name, setName] = useState('');
 
